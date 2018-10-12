@@ -5,13 +5,40 @@ h1 {
 	color: MediumSeaGreen;
 	font-family: Courier New;
 }
+h3 {
+	color: MediumSeaGreen
+}
 p {
+	color: MediumSeaGreen;
+	font-family: Courier New;
+}
+pre {
 	color: MediumSeaGreen;
 	font-family: Courier New;
 }
 a {
 	color: MediumSeaGreen;
 	font-family: Courier New;
+}
+a:link {
+    color: Lime; 
+    background-color: transparent; 
+    text-decoration: none;
+}
+a:visited {
+    color: Lime;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: #ddd;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: tomato;
+    background-color: transparent;
+    text-decoration: underline;
 }
 .topnav {
     overflow: hidden;

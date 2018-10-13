@@ -6,7 +6,12 @@ h1 {
 	font-family: Courier New;
 }
 h3 {
+<<<<<<< HEAD
 	color: mediumseagreen
+=======
+	color: MediumSeaGreen;
+	font-family: Courier New;
+>>>>>>> 391ef16ec0840a32a595871a6b14f7bdc3e755db
 }
 p {
 	color: mediumseagreen;

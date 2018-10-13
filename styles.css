@@ -2,22 +2,22 @@ body {
     background-color: black;
 }
 h1 {
-	color: MediumSeaGreen;
+	color: mediumseagreen;
 	font-family: Courier New;
 }
 h3 {
-	color: MediumSeaGreen
+	color: mediumseagreen
 }
 p {
-	color: MediumSeaGreen;
+	color: mediumseagreen;
 	font-family: Courier New;
 }
 pre {
-	color: MediumSeaGreen;
+	color: mediumseagreen;
 	font-family: Courier New;
 }
 a {
-	color: MediumSeaGreen;
+	color: mediumseagreen;
 	font-family: Courier New;
 }
 a:link {
@@ -45,7 +45,7 @@ a:active {
 }
 .topnav a {
     float: left;
-    color: MediumSeaGreen;
+    color: mediumseagreen;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;

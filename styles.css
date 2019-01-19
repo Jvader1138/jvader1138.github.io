@@ -1,34 +1,16 @@
 * {
-   box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 body {
-  font-family: Arial;
-  padding: 10px;
-  background: #66ccff;
+  margin: 20px;
+  background: #000080;
+  font-family: arial;
 }
-a:link {
-    color: #0066ff;
-    background-color: transparent;
-    text-decoration: none;
-}
-a:visited {
-    color: #0066ff;
-    background-color: transparent;
-    text-decoration: none;
-}
-a:hover {
-    color: #0066ff;
-    background-color: transparent;
-    text-decoration: underline;
-}
-a:active {
-    color: tomato;
-    background-color: transparent;
-    text-decoration: underline;
-}
+
+/* Style the header */
 .header {
-  background-image: url('images/binary.png');
-  height: 50%;
+  background-image: url('images/hyperspace.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,10 +22,14 @@ a:active {
 .header h1 {
   font-size: 50px;
 }
+
+/* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #262626;
 }
+
+/* Style the topnav links */
 .topnav a {
   float: left;
   display: block;
@@ -52,86 +38,115 @@ a:active {
   padding: 14px 16px;
   text-decoration: none;
 }
+
+/* Change color on hover */
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
-/*AKA Main body*/
-.leftcolumn {
-  float: left;
-  width: 75%;
+
+.row {
+  height: 100%;
 }
-/*AKA Sidebar*/
-.rightcolumn {
+
+/* Create three unequal columns that floats next to each other */
+.column {
   float: left;
-  width: 25%;
-  background-color: #66ccff;
-  padding-left: 20px;
 }
+
+/* Left and right column */
+.column.side {
+  width: 20%;
+}
+
+/* Middle column */
+.column.main {
+  width: 80%;
+}
+
+/* Card for articles */
 .card {
-  background-color: white;
-  padding: 20px;
   margin-top: 20px;
+  background-color: white;
+  width: 100%;
+  padding: 20px;
 }
+
+/* BEGIN DROPDOWN */
+.sidenav {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* For Quotes */
+.sidenav p {
+  padding: 6px 8px 6px 16px;
+  color: #818181;
+}
+
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  /* Font size and family needed to keep consistency in sidnav */
+  font-family: arial;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+.active {
+  background-color: black;
+  color: white;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+/* END DROPDOWN */
+
+/* Footer */
+.footer {
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: white;
-  margin-top: 20px;
-}
-.centerimg {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-/*Phone Friendly*/
-@media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {
-        width: 100%;
-        padding: 0;
-    }
-}
-@media screen and (max-width: 400px) {
-    .topnav a {
-        float: none;
-        width: 100%;
-    }
-}
-/*Begin Search Engine*/
-#searchInput {
-  background-image: url('images/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
 
-#searchUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#searchUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  display: block
-}
-
-#searchUL li a:hover:not(.header) {
-  background-color: #eee;
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
 }

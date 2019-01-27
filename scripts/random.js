@@ -4,6 +4,7 @@ links[0] = "index.html";
 links[1] = "pages/about.html";
 links[2] = "pages/roman-army.html";
 links[3] = "pages/template.html";
+links[4] = "pages/hhg/infinite-improbability-drive.html";
 
 
 function randomFunction() {

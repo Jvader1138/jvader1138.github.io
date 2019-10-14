@@ -1,55 +1,46 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <link rel="stylesheet" href="styles.css">
-    <!-- for unique characters -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jvader's Website</title>
-    <link rel="icon" href="images/profile.png">
-  </head>
-  <body>
+    <head>
+        <base href="#">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jvader's Website</title>
+        <link rel="icon" href="images/profile.png">
+    </head>
 
-    <div class="header">
-      <h1>Jvader's Website</h1>
-      <p>Live long and prosper.</p>
-    </div>
+    <body>
+        <nav id="nav">
+            <a href="index.html" class="home">Home</a>
+            <a href="uk/index.html">England</a>
+            <a href="us/index.html">America</a>
+            <a href="rome/index.html">Rome</a>
+            <a href="other/index.html">Other</a>
+            <a href="about.html">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+        </nav>
 
-    <div class="topnav">
-      <a href="index.html">Home</a>
-      <a href="pages/about.html">About</a>
-      <a href="random-function.html">Random</a>
-      <a href="https://www.w3schools.com" style="float:right" target="_blank" rel="noreferrer">Help</a>
-    </div>
-
-    <div class="row">
-      <div class="column side">
-        <div class="sidenav">
-          <a href="pages/roman-army.html">Roman Army</a>
-          <button class="dropdown-btn">Hichhiker's Guide
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-container">
-            <a href="pages/hhg/infinite-improbability-drive.html">Infinite Improbability Drive</a>
-          </div>
-          <a href="pages/template.html">Webpage Template</a>
+        <header>
+            <h1>Jvader's Website</h1>
+            <p>Self Proclaimed Military Historian -- Also an Obvious Nerd</p>
+        </header>
+        
+        <div class="content">
+            <h1>Hello There</h1>
+            <p>This site is currently under development, so GO AWAY! Or stay. Look around for a while if you must...</p>
+            <br>
+            <h1>Lorem Ipsum</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sed viverra ipsum nunc aliquet bibendum enim. In massa tempor nec feugiat. Nunc aliquet bibendum enim facilisis gravida. Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Amet luctus venenatis lectus magna fringilla. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Egestas egestas fringilla phasellus faucibus scelerisque eleifend. Sagittis orci a scelerisque purus semper eget duis. Nulla pharetra diam sit amet nisl suscipit. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Fusce ut placerat orci nulla. Pharetra vel turpis nunc eget lorem dolor. Tristique senectus et netus et malesuada.</p>
+            <p>Etiam tempor orci eu lobortis elementum nibh tellus molestie. Neque egestas congue quisque egestas. Egestas integer eget aliquet nibh praesent tristique. Vulputate mi sit amet mauris. Sodales neque sodales ut etiam sit. Dignissim suspendisse in est ante in. Volutpat commodo sed egestas egestas. Felis donec et odio pellentesque diam. Pharetra vel turpis nunc eget lorem dolor sed viverra. Porta nibh venenatis cras sed felis eget. Aliquam ultrices sagittis orci a. Dignissim diam quis enim lobortis. Aliquet porttitor lacus luctus accumsan. Dignissim convallis aenean et tortor at risus viverra adipiscing at.</p>
         </div>
-      </div>
-      <div class="column main">
-        <div class="card">
-          <h2>Why Hello There</h2>
-          <p>This site is currently under development, so GO AWAY!</p>
-          <p>Or stay. Look around for a while if you must...</p>
-        </div>
-      </div>
-    </div>
-    <div class="footer">
-      <p>This website is powered by Github.</p>
-    </div>
 
-<!-- JavaScript imports -->
-    <script src="scripts/dropdown.js"></script>
+        <footer>
+            <p>This site is hosted on Github Pages.<a href="https://github.com/jvader314" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a></p>
+        </footer>
 
-  </body>
+        <script src="scripts/nav.js"></script>
+    </body>
 </html>

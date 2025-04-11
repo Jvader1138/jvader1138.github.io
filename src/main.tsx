@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import AboutPage from './pages/about';
 import CulversPage from './pages/culvers';
@@ -9,24 +9,15 @@ import NotFoundPage from './pages/notFound';
 
 import './index.css';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <HomePage />,
-    errorElement: <NotFoundPage />,
-  },
-  {
-    path: '/about',
-    element: <AboutPage />,
-  },
-  {
-    path: '/culvers',
-    element: <CulversPage />,
-  },
-]);
-
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <BrowserRouter basename="/">
+        <Routes>
+          <Route path="" element={<HomePage />}></Route>
+          <Route path="/about" element={<AboutPage />}></Route>
+          <Route path="/culvers" element={<CulversPage />}></Route>
+          <Route path="*" element={<NotFoundPage />}></Route>
+        </Routes>
+      </BrowserRouter>
   </StrictMode>,
 );

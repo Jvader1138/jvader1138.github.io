@@ -61,11 +61,11 @@ export default function CulversPage() {
 
   return (
     <div>
-      <h1 className="text-center text-lg mt-2">
+      <h1 className="text-5xl text-center text-white">
         Culver's Flavor-of-the-Day-Inator
       </h1>
-      <form onSubmit={handleSubmit} className="max-w-sm mx-auto mt-10 p-4 bg-white shadow-md rounded">
-        <label htmlFor="simpleInput" className="block text-sm font-medium text-gray-700 mb-2">
+      <form onSubmit={handleSubmit} className="max-w-sm mx-auto my-10 p-4 bg-slate-800 rounded-xl shadow-xl">
+        <label htmlFor="simpleInput" className="block text-sm font-medium text-white mb-2">
           ZIP Code
         </label>
         <input
@@ -73,31 +73,39 @@ export default function CulversPage() {
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          className="w-full text-gray-700 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full text-gray-300 px-4 py-2 border border-slate-300 rounded-xl shadow-xl focus:outline-none focus:ring-2 focus:ring-slate-300"
           placeholder="Type something..."
         />
-        <button type="submit" className="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
+        <button type="submit" className="mt-4 w-full bg-slate-950 text-white py-2 px-4 rounded-xl shadow-xl hover:bg-slate-700 transition-colors">
           Search
         </button>
       </form>
-      {loading && <p>Loading...</p>}
-      {error && <p>Error: {error}</p>}
-      {data && (
-      <div>
-        {data.map((location) => (
-        <div key={location.slug} className="mb-1.5">
-          <h2>{location.slug}</h2>
-          <ul>
-            {Object.entries(location.flavors).map(([date, flavor]) => (
-              <li key={date}>
-                <strong>{date}:</strong> {flavor}
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+      <div className="flex justify-center">
+        {loading && <p className="text-white">Loading...</p>}
+        {error && <p className="text-white">Error: {error}</p>}
+        {data && data.length > 0 && (
+          <table className="table-auto border border-slate-700 text-white shadow-xl">
+            <thead>
+              <tr>
+                <th></th>
+                {Object.entries(data[0].flavors).map(([date]) => (
+                  <th key={date} className="border border-slate-700 text-left p-1">{date}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {data.map((location) => (
+                <tr key={location.slug}>
+                  <td className="border border-slate-700 text-left font-bold p-1">{location.slug}</td>
+                  {Object.entries(location.flavors).map(([date, flavor]) => (
+                    <td key={date} className="border border-slate-700 p-1">{flavor}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
       </div>
-      )}
     </div>
   );
 }

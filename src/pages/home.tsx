@@ -14,9 +14,6 @@ export default function HomePage() {
         setStatus('Online');
       }
     })
-    .catch(error => {
-      setStatus('Offline');
-    })
   }, []);
 
   return (
